@@ -99,7 +99,7 @@ async function add_layer() {
     }).addTo(map);
 
     my_geo_json_layer_group = L.layerGroup([my_geo_json_layer]);
-    layerControl.addOverlay(my_geo_json_layer_group, "点／線／面")
+    layerControl.addOverlay(my_geo_json_layer_group, "GeoJSONレイヤー")
 
     // 道路を追加
     let road_feature = await fetchGeoJson("N01-07L-2K-13_Road.json");
