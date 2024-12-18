@@ -72,44 +72,6 @@ async function fetchGeoJson(filename) {
 async function add_layer() {
     let my_geo_json = await fetchGeoJson("my_geojson_data.json");
 
-    // GeoJSONレイヤーを追加
-    let my_geo_json_layer = L.geoJSON(my_geo_json, {
-        onEachFeature: function (feature, layer) {
-            if (feature.properties && feature.properties.name) {
-                layer.bindPopup(feature.properties.name);
-            }
-        },
-        style: function (feature) {
-            switch (feature.geometry.type) {
-                case 'Point': return {color: "#ff0000"};
-                case 'LineString': return {color: "#0000ff"};
-                case 'Polygon': return {color: "#00ff00"};
-            }
-        },
-        pointToLayer: function (feature, latlng) {
-            return L.circleMarker(latlng, {
-                radius: 8,
-                fillColor: "#ff0000",
-                color: "#000",
-                weight: 1,
-                opacity: 1,
-                fillOpacity: 0.8
-            });
-        }
-    }).addTo(map);
-
-    my_geo_json_layer_group = L.layerGroup([my_geo_json_layer]);
-    layerControl.addOverlay(my_geo_json_layer_group, "GeoJSONレイヤー")
-
-    // 道路を追加
-    let road_feature = await fetchGeoJson("N01-07L-2K-13_Road.json");
-    let road_layer = L.geoJSON(road_feature, {
-        style: function (feature) {
-            return {color: "#ff00ff"};
-        }
-    }).addTo(map);
-
-    road_layer_group = L.layerGroup([road_layer]);
-    layerControl.addOverlay(road_layer_group, "道路")
+   
 }
 add_layer();
