@@ -16,9 +16,9 @@
       - アクセスすると403エラーが発生するため、コピペ推奨
 - **気象データ**
   - 気象庁
-    - 最新の気象データ：https://www.data.jma.go.jp/stats/data/mdrr/index.html
-    - 過去の気象データ検索：https://www.data.jma.go.jp/stats/etrn/index.php
-    - 過去の気象データ・ダウンロード：https://www.data.jma.go.jp/risk/obsdl/index.php
+    - [最新の気象データ](https://www.data.jma.go.jp/stats/data/mdrr/index.html)
+    - [過去の気象データ検索](https://www.data.jma.go.jp/stats/etrn/index.php)
+    - [過去の気象データ・ダウンロード](https://www.data.jma.go.jp/risk/obsdl/index.php)
 
 ## デモリンク
 https://fuyu-1110.github.io/2024-12-18/
